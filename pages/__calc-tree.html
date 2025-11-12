@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Участвовать - ДеревьЯ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Навигация -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-gray-700 rounded-lg mr-3"></div>
+                <h1 class="text-2xl font-bold text-gray-800">ДеревьЯ</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="./main.html" class="text-gray-800 font-medium">Главная</a>
+                <a href="./__calc-tree.html" class="text-gray-800 font-medium underline">Участвовать</a>
+                <a href="./__history-tree.html" class="text-gray-800 font-medium ">Истории</a>
+                <a href="./__company.html" class="text-gray-800 font-medium">Для компаний</a>
+                <a href="./__alley-brave.html" class="text-gray-800 font-medium">Роща славы</a>
+            </nav>
+            <button class="md:hidden text-gray-800 transition-transform duration-200 hover:scale-110 active:scale-95">
+                <div class="w-6 h-6 flex flex-col justify-between">
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Заголовок страницы -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4 text-gray-800">Как принять участие</h1>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">Выберите удобный для вас формат участия в восстановлении лесов России</p>
+        </div>
+    </section>
+
+    <!-- Форма выбора участия -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Выберите формат участия</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-lg shadow-md p-6 border-2 border-gray-200 transition-all duration-300 hover:shadow-lg hover:border-gray-400">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                            <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">Частное лицо</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-gray-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Посадка от 1 до 100 саженцев</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-gray-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Участие в групповой посадке</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-gray-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Сертификат участника</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-gray-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Фотоотчёт о посадке</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Выбрать</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 border-2 border-amber-200 transition-all duration-300 hover:shadow-lg hover:border-amber-400">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                            <div class="w-8 h-8 bg-amber-700 rounded-full"></div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-center text-amber-800">Специальные программы</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Посвящение в мужчины</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Свадебное дерево</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Роща славы</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 flex-shrink-0"></div>
+                                <span>Памятное дерево</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Выбрать</button>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 mb-12 transition-all duration-300 hover:shadow-md">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800 text-center">Калькулятор посадки</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <div class="mb-6">
+                                <label class="block text-lg font-medium text-gray-700 mb-2">Количество саженцев</label>
+                                <div class="flex items-center">
+                                    <button class="w-10 h-10 bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white rounded-l-lg transition-colors duration-200">-</button>
+                                    <div class="w-20 h-10 bg-white border-t border-b border-gray-300 flex items-center justify-center">10</div>
+                                    <button class="w-10 h-10 bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white rounded-r-lg transition-colors duration-200">+</button>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-lg font-medium text-gray-700 mb-2">Регион посадки</label>
+                                <div class="w-full p-3 border border-gray-300 rounded-lg bg-white transition-all duration-200 hover:border-gray-500 focus-within:border-gray-500 focus-within:ring-2 focus-within:ring-gray-200">Московская область</div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-lg font-medium text-gray-700 mb-2">Тип дерева</label>
+                                <div class="w-full p-3 border border-gray-300 rounded-lg bg-white transition-all duration-200 hover:border-gray-500 focus-within:border-gray-500 focus-within:ring-2 focus-within:ring-gray-200">Сосна обыкновенная</div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-lg">
+                            <h4 class="text-xl font-semibold mb-4 text-gray-800">Ваш заказ</h4>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex justify-between">
+                                    <span>10 саженцев сосны</span>
+                                    <span class="font-medium">10 000 ₽</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Участие в посадке</span>
+                                    <span class="font-medium">0 ₽</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Сертификат</span>
+                                    <span class="font-medium">0 ₽</span>
+                                </div>
+                                <div class="border-t pt-3 flex justify-between text-lg font-semibold">
+                                    <span>Итого</span>
+                                    <span class="text-gray-700">10 000 ₽</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Перейти к оплате</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Частые вопросы</h3>
+                    <div class="space-y-4 max-w-2xl mx-auto">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-200 transition-all duration-300 hover:shadow-md hover:border-gray-300 cursor-pointer">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-medium text-lg">Как происходит процесс посадки?</h4>
+                                <div class="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:rotate-90">
+                                    <div class="w-3 h-0.5 bg-white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-200 transition-all duration-300 hover:shadow-md hover:border-gray-300 cursor-pointer">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-medium text-lg">Можно ли посадить дерево, если я не могу приехать?</h4>
+                                <div class="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:rotate-90">
+                                    <div class="w-3 h-0.5 bg-white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-200 transition-all duration-300 hover:shadow-md hover:border-gray-300 cursor-pointer">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-medium text-lg">Какие гарантии, что дерево приживется?</h4>
+                                <div class="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center transition-transform duration-300 hover:rotate-90">
+                                    <div class="w-3 h-0.5 bg-white"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ДеревьЯ</h3>
+                    <p class="text-gray-200">Посади лес, в который можно вернуться</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li>Email: info@derevya.ru</li>
+                        <li>Телефон: +7 (495) 123-45-67</li>
+                        <li>Адрес: Москва, ул. Лесная, д. 1</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Соцсети</h4>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Документы</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Оферта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 ДеревьЯ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

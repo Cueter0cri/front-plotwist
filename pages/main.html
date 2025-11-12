@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДеревьЯ - главная страница</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Навигация -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="../icon/simple-logo.svg" alt="Derevia">
+                <h1 class="text-2xl font-bold text-gray-800">ДеревьЯ</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="./main.html" class="text-gray-800 font-medium transition-all duration-300 hover:text-gray-600 hover:underline">Главная</a>
+                <a href="./__calc-tree.html" class="text-gray-800 font-medium transition-all duration-300 hover:text-gray-600 hover:underline">Участвовать</a>
+                <a href="./__history-tree.html" class="text-gray-800 font-medium transition-all duration-300 hover:text-gray-600 hover:underline">Истории</a>
+                <a href="./__company.html" class="text-gray-800 font-medium transition-all duration-300 hover:text-gray-600 hover:underline">Для компаний</a>
+                <a href="./__alley-brave.html" class="text-gray-800 font-medium transition-all duration-300 hover:text-gray-600 hover:underline">Роща славы</a>
+            </nav>
+            <button class="md:hidden text-gray-800 transition-transform duration-200 hover:scale-110 active:scale-95">
+                <div class="w-6 h-6 flex flex-col justify-between">
+                    <div class="w-full h-0.5 bg-gray-800 transition-all duration-300"></div>
+                    <div class="w-full h-0.5 bg-gray-800 transition-all duration-300"></div>
+                    <div class="w-full h-0.5 bg-gray-800 transition-all duration-300"></div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Первый экран -->
+    <section class="relative h-96 flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('/images/gornoe-ozero.jpg')">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 transition-all duration-500 hover:scale-105">Покупай саженцы — сажай лес</h2>
+            <p class="text-xl md:text-2xl mb-8 text-white transition-all duration-500 hover:scale-105">Лес, в который хочется вернуться</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <button class="bg-[#4DB723] border-[#4DB723] active:bg-gray-800 text-white px-8 py-3 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Выбрать город и посадку</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Выбор города и участия -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 transition-all duration-500 hover:scale-105">Выберите город и формат участия</h2>
+            
+            <div class="max-w-lg mx-auto mb-12">
+                <label class="block text-lg font-medium text-gray-700 mb-2">Ваш город</label>
+                <div class="w-full p-3 border border-gray-300 rounded-lg bg-white transition-all duration-300 hover:border-gray-500 hover:shadow-md cursor-pointer">Выберите город</div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Карточка частного лица -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                        <img src="../icon/people-icon.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Частное лицо</h3>
+                    <p class="text-gray-600 mb-4">Посадка от 1 до 100 саженцев</p>
+                    <div class="mb-4">
+                        <label class="block text-sm text-gray-600 mb-1">Количество саженцев</label>
+                        <div class="w-full h-2 bg-gray-200 rounded-full mb-1 transition-all duration-300 hover:bg-gray-300 cursor-pointer">
+                            <div class="w-1/2 h-2 bg-[#8fc979] rounded-full transition-all duration-300 hover:bg-gray-700"></div>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span class="transition-all duration-300 hover:text-gray-700">1</span>
+                            <span class="transition-all duration-300 hover:text-gray-700">10</span>
+                            <span class="transition-all duration-300 hover:text-gray-700">100</span>
+                        </div>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-700 mb-4 transition-all duration-300 hover:scale-105">10 000 ₽</p>
+                    <button class="w-full bg-[#8fc979] hover:bg-[#afdd9b] active:bg-[#5e904b] text-white py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Участвовать</button>
+                </div>
+                
+                <!-- Карточка посвящения в мужчины -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                        <img src="../icon/peoples-icon.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Посвящение в мужчины</h3>
+                    <p class="text-gray-600 mb-4">Ритуал для отца и сына</p>
+                    <p class="text-lg font-semibold text-gray-700 mb-4 transition-all duration-300 hover:scale-105">5 000 ₽</p>
+                    <button class="w-full bg-[#8fc979] hover:bg-[#afdd9b] active:bg-[#5e904b] text-white py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Записаться</button>
+                </div>
+                
+                <!-- Карточка свадебного дерева -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                        <img src="../icon/heart-icon.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Свадебное дерево</h3>
+                    <p class="text-gray-600 mb-4">Традиция для новой семьи</p>
+                    <p class="text-lg font-semibold text-gray-700 mb-4 transition-all duration-300 hover:scale-105">5 000 ₽</p>
+                    <button class="w-full bg-[#8fc979] hover:bg-[#afdd9b] active:bg-[#5e904b] text-white py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Посадить</button>
+                </div>
+                
+                <!-- Карточка рощи славы -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                        <img src="../icon/gift-icon.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Роща славы</h3>
+                    <p class="text-gray-600 mb-4">Память о защитниках</p>
+                    <p class="text-lg font-semibold text-gray-700 mb-4 transition-all duration-300 hover:scale-105">5 000 ₽</p>
+                    <button class="w-full bg-[#8fc979] hover:bg-[#afdd9b] active:bg-[#5e904b] text-white py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Посадить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Эмоциональные блоки -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- Блок 1: Посвящение в мужчины -->
+            <div class="flex flex-col md:flex-row items-center mb-20">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="w-full h-80 bg-gray-200 rounded-lg transition-all duration-500 hover:shadow-lg"></div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800 transition-all duration-500 hover:scale-105">Посади дерево. Стань мужчиной.</h2>
+                    <p class="text-lg text-gray-700 mb-6">Мужчина — это не про «бороду отрастил». Это про ответственность.</p>
+                    <p class="text-lg text-gray-700 mb-6">Один мальчик сажает одно дерево — и в этот момент у него появляется что-то своё: живое, растущее, зависимое от него.</p>
+                    <p class="text-lg text-gray-700 mb-6">Раз в год мы проводим ритуал посвящения в мужчины. Отец и сын выходят на землю, берут в руки лопаты и сажают дерево. Не в теории, не в «когда-нибудь», а здесь и сейчас.</p>
+                    <button class="bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Записаться на посвящение</button>
+                    <p class="mt-4 text-gray-600 transition-all duration-300 hover:text-amber-700">5 000 ₽ — вклад в лес и в характер ребёнка</p>
+                </div>
+            </div>
+            
+            <!-- Блок 2: Свадебное дерево -->
+            <div class="flex flex-col md:flex-row-reverse items-center mb-20">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <div class="w-full h-80 bg-pink-200 rounded-lg transition-all duration-500 hover:shadow-lg"></div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800 transition-all duration-500 hover:scale-105">Свадебное дерево: вместо очередного букета — корни в земле</h2>
+                    <p class="text-lg text-gray-700 mb-6">Свадьба заканчивается, фото блекнут, торт съели и забыли.</p>
+                    <p class="text-lg text-gray-700 mb-6">Но если в день росписи вы сажаете своё дерево — память становится живой.</p>
+                    <p class="text-lg text-gray-700 mb-6">Каждая семья после ЗАГСа может поехать не в ТЦ, а на свою первую совместную посадку. Дерево растёт вместе с вами: переживает ветра, морозы, засуху. Как и семья: главное — не бросать, ухаживать и возвращаться.</p>
+                    <button class="bg-pink-700 hover:bg-pink-600 active:bg-pink-800 text-white px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Посадить семейное дерево</button>
+                    <p class="mt-4 text-gray-600 transition-all duration-300 hover:text-pink-700">5 000 ₽ — ваша традиция, ваш лес, ваш след</p>
+                </div>
+            </div>
+            
+            <!-- Блок 3: Роща славы -->
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="w-full h-80 bg-blue-200 rounded-lg transition-all duration-500 hover:shadow-lg"></div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800 transition-all duration-500 hover:scale-105">Роща славы. Дерево, которое держит память</h2>
+                    <p class="text-lg text-gray-700 mb-6">Есть вещи, которые словами не лечатся.</p>
+                    <p class="text-lg text-gray-700 mb-6">Когда отец на фронте. Когда его уже нет. Когда ребёнку нужно во что-то упереться, кроме пустоты.</p>
+                    <p class="text-lg text-gray-700 mb-6">Мы создаём Рощу славы — живой мемориал, где дети с мамами сажают деревья в честь своих защитников.</p>
+                    <p class="text-lg text-gray-700 mb-6">У каждого дерева — имя. У каждой семьи — место, куда можно приходить, обнимать ствол и говорить то, что не сказано. Дерево растёт. Так же, как растёт ребёнок. И каждый раз, когда он смотрит на крону, он знает: «Папа был. Папа есть в этой земле. И я продолжаю».</p>
+                    <button class="bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Посадить дерево в Роще славы</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок для компаний -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-800 transition-all duration-500 hover:scale-105">Шефство над лесом для компаний</h2>
+            <p class="text-xl text-center mb-12 max-w-3xl mx-auto transition-all duration-500 hover:scale-105">Ваша компания может стать шефом леса и внести вклад в восстановление лесного фонда России. Мы предлагаем три уровня участия с разными возможностями.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Тариф 1 гектар -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center border-2 border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-4 text-amber-700 transition-all duration-300 hover:scale-105">1 гектар</h3>
+                    <p class="text-4xl font-bold mb-6 text-amber-700 transition-all duration-300 hover:scale-105">100 000 ₽</p>
+                    <ul class="text-left mb-8 space-y-3">
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Сертификат шефа гектара
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Отличительный знак в офисе
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Ежеквартальные отчёты
+                        </li>
+                    </ul>
+                    <button class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Оставить заявку</button>
+                </div>
+                
+                <!-- Тариф 10 гектаров -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center border-2 border-amber-400 transform scale-105 relative transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-110">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-110">Популярный</div>
+                    <h3 class="text-2xl font-bold mb-4 text-amber-700 transition-all duration-300 hover:scale-105">10 гектаров</h3>
+                    <p class="text-4xl font-bold mb-6 text-amber-700 transition-all duration-300 hover:scale-105">900 000 ₽</p>
+                    <ul class="text-left mb-8 space-y-3">
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Все преимущества 1 гектара
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Упоминание на сайте и в соцсетях
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Возможность расширять площадь
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Корпоративная посадка для сотрудников
+                        </li>
+                    </ul>
+                    <button class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Оставить заявку</button>
+                </div>
+                
+                <!-- Тариф 100 гектаров -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center border-2 border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-4 text-amber-700 transition-all duration-300 hover:scale-105">100 гектаров</h3>
+                    <p class="text-4xl font-bold mb-6 text-amber-700 transition-all duration-300 hover:scale-105">8 000 000 ₽</p>
+                    <ul class="text-left mb-8 space-y-3">
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Все преимущества 10 гектаров
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Именной знак на территории
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            PR-кампания в СМИ
+                        </li>
+                        <li class="flex items-start transition-all duration-300 hover:translate-x-1">
+                            <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1 transition-transform duration-300 hover:scale-110"></div>
+                            Ежегодная возможность "удваивать гектар"
+                        </li>
+                    </ul>
+                    <button class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Истории посадок -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 transition-all duration-500 hover:scale-105">Истории посадок</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Карточка истории 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-gray-300 transition-all duration-500 hover:scale-105"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 transition-all duration-300 hover:text-gray-700">Весенняя посадка в Подмосковье</h3>
+                        <p class="text-gray-600 mb-4">Более 200 семей приняли участие в посадке 5000 саженцев сосны.</p>
+                        <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать историю →</a>
+                    </div>
+                </div>
+                
+                <!-- Карточка истории 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-gray-300 transition-all duration-500 hover:scale-105"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 transition-all duration-300 hover:text-gray-700">Корпоративный выезд "Газпромбанка"</h3>
+                        <p class="text-gray-600 mb-4">Сотрудники посадили 2 гектара леса в Ленинградской области.</p>
+                        <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать историю →</a>
+                    </div>
+                </div>
+                
+                <!-- Карточка истории 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-gray-300 transition-all duration-500 hover:scale-105"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 transition-all duration-300 hover:text-gray-700">Свадебное дерево Анны и Михаила</h3>
+                        <p class="text-gray-600 mb-4">Молодая семья начала свою историю с посадки дуба в день свадьбы.</p>
+                        <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать историю →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-800 transition-all duration-500 hover:scale-105">Видео с посадок</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Видео 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                        <div class="w-full h-64 bg-gray-300 flex items-center justify-center transition-all duration-500 hover:scale-105">
+                            <div class="w-16 h-16 bg-gray-500 rounded-full transition-transform duration-300 hover:scale-110"></div>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <p class="font-medium transition-all duration-300 hover:text-gray-700">Обзор посадки с квадрокоптера - май 2023</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Видео 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                        <div class="w-full h-64 bg-gray-300 flex items-center justify-center transition-all duration-500 hover:scale-105">
+                            <div class="w-16 h-16 bg-gray-500 rounded-full transition-transform duration-300 hover:scale-110"></div>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <p class="font-medium transition-all duration-300 hover:text-gray-700">Репортаж НТВ о проекте "ДеревьЯ"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 transition-all duration-500 hover:scale-105">Статистика по лесам России</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- Прогресс-бар вырубки -->
+                    <div class="mb-8 transition-all duration-300 hover:scale-105">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium transition-all duration-300 hover:text-red-600">Вырубка лесов в год</span>
+                            <span class="font-bold text-red-600 transition-all duration-300 hover:scale-110">1.5 млн га</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4 transition-all duration-500 hover:bg-gray-300 cursor-pointer">
+                            <div class="bg-red-600 h-4 rounded-full transition-all duration-500 hover:bg-red-700" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Прогресс-бар пожаров -->
+                    <div class="mb-8 transition-all duration-300 hover:scale-105">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium transition-all duration-300 hover:text-orange-600">Пожары в год</span>
+                            <span class="font-bold text-orange-600 transition-all duration-300 hover:scale-110">9 млн га</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4 transition-all duration-500 hover:bg-gray-300 cursor-pointer">
+                            <div class="bg-orange-600 h-4 rounded-full transition-all duration-500 hover:bg-orange-700" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Прогресс-бар восстановления -->
+                    <div class="mb-8 transition-all duration-300 hover:scale-105">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium transition-all duration-300 hover:text-gray-600">Восстановление лесов в год</span>
+                            <span class="font-bold text-gray-600 transition-all duration-300 hover:scale-110">0.9 млн га</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4 transition-all duration-500 hover:bg-gray-300 cursor-pointer">
+                            <div class="bg-gray-600 h-4 rounded-full transition-all duration-500 hover:bg-gray-700" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 transition-all duration-500 hover:scale-105">Зачем важно не «лайкать посты про экологию», а выходить и сажать</h3>
+                    <p class="text-lg text-gray-700 mb-4 transition-all duration-300 hover:text-gray-900">Каждый год Россия теряет миллионы гектаров леса из-за вырубок и пожаров. Государственные программы не успевают восстанавливать всё утраченное.</p>
+                    <p class="text-lg text-gray-700 mb-4 transition-all duration-300 hover:text-gray-900">Наши леса — это не только «лёгкие планеты», но и дом для тысяч видов животных, источник чистого воздуха и воды, место силы для миллионов людей.</p>
+                    <p class="text-lg text-gray-700 transition-all duration-300 hover:text-gray-900">Сажая дерево сегодня, вы создаёте живой памятник, который будет расти десятилетиями, очищая воздух и давая приют природе. Это реальный вклад, а не виртуальный лайк.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как это работает -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 transition-all duration-500 hover:scale-105">Как это работает</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Шаг 1 -->
+                <div class="text-center transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center text-white text-2xl font-bold transition-transform duration-300 hover:scale-110">1</div>
+                    <h3 class="text-xl font-semibold mb-2 transition-all duration-300 hover:text-gray-700">Выбираете город и формат</h3>
+                    <p class="text-gray-600 transition-all duration-300 hover:text-gray-800">Определяетесь с количеством саженцев или выбираете специальную программу</p>
+                </div>
+                
+                <!-- Шаг 2 -->
+                <div class="text-center transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center text-white text-2xl font-bold transition-transform duration-300 hover:scale-110">2</div>
+                    <h3 class="text-xl font-semibold mb-2 transition-all duration-300 hover:text-gray-700">Оплачиваете</h3>
+                    <p class="text-gray-600 transition-all duration-300 hover:text-gray-800">Вносите оплату онлайн или получаете счёт для компании</p>
+                </div>
+                
+                <!-- Шаг 3 -->
+                <div class="text-center transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center text-white text-2xl font-bold transition-transform duration-300 hover:scale-110">3</div>
+                    <h3 class="text-xl font-semibold mb-2 transition-all duration-300 hover:text-gray-700">Получаете приглашение</h3>
+                    <p class="text-gray-600 transition-all duration-300 hover:text-gray-800">Мы высылаем координаты, дату и время посадки, инструкции</p>
+                </div>
+                
+                <!-- Шаг 4 -->
+                <div class="text-center transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gray-700 rounded-full flex items-center justify-center text-white text-2xl font-bold transition-transform duration-300 hover:scale-110">4</div>
+                    <h3 class="text-xl font-semibold mb-2 transition-all duration-300 hover:text-gray-700">Сажаете и получаете отчёт</h3>
+                    <p class="text-gray-600 transition-all duration-300 hover:text-gray-800">Участвуете в посадке, получаете сертификат и фото/видео отчёт</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Доверие и гарантии -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 transition-all duration-500 hover:scale-105">Доверие и гарантии</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800 transition-all duration-500 hover:scale-105">Наши партнёры</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-gray-100 h-24 flex items-center justify-center rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                            <span class="text-gray-500 font-medium transition-all duration-300 hover:text-gray-700">Логотип партнёра 1</span>
+                        </div>
+                        <div class="bg-gray-100 h-24 flex items-center justify-center rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                            <span class="text-gray-500 font-medium transition-all duration-300 hover:text-gray-700">Логотип партнёра 2</span>
+                        </div>
+                        <div class="bg-gray-100 h-24 flex items-center justify-center rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                            <span class="text-gray-500 font-medium transition-all duration-300 hover:text-gray-700">Логотип партнёра 3</span>
+                        </div>
+                        <div class="bg-gray-100 h-24 flex items-center justify-center rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                            <span class="text-gray-500 font-medium transition-all duration-300 hover:text-gray-700">Логотип партнёра 4</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800 transition-all duration-500 hover:scale-105">Документы</h3>
+                        <div class="space-y-2">
+                            <a href="#" class="flex items-center text-gray-700 transition-all duration-300 hover:text-gray-800 hover:pl-2">
+                                <div class="w-5 h-5 bg-gray-700 rounded mr-2 transition-transform duration-300 hover:scale-110"></div>
+                                Уставные документы
+                            </a>
+                            <a href="#" class="flex items-center text-gray-700 transition-all duration-300 hover:text-gray-800 hover:pl-2">
+                                <div class="w-5 h-5 bg-gray-700 rounded mr-2 transition-transform duration-300 hover:scale-110"></div>
+                                Лицензии и разрешения
+                            </a>
+                            <a href="#" class="flex items-center text-gray-700 transition-all duration-300 hover:text-gray-800 hover:pl-2">
+                                <div class="w-5 h-5 bg-gray-700 rounded mr-2 transition-transform duration-300 hover:scale-110"></div>
+                                Отчётность за 2023 год
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800 transition-all duration-500 hover:scale-105">Остались вопросы?</h3>
+                    <form class="space-y-4 transition-all duration-300 hover:shadow-md p-6 rounded-lg">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Ваше имя</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-gray-500 focus:border-gray-500 focus:ring-2 focus:ring-gray-200">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-gray-500 focus:border-gray-500 focus:ring-2 focus:ring-gray-200">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Сообщение</label>
+                            <textarea rows="4" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-gray-500 focus:border-gray-500 focus:ring-2 focus:ring-gray-200"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Отправить вопрос</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 transition-all duration-300 hover:scale-105">ДеревьЯ</h3>
+                    <p class="text-gray-200 transition-all duration-300 hover:text-white">Посади лес, в который можно вернуться</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 transition-all duration-300 hover:scale-105">Контакты</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li class="transition-all duration-300 hover:text-white hover:pl-1">Email: info@derevya.ru</li>
+                        <li class="transition-all duration-300 hover:text-white hover:pl-1">Телефон: +7 (495) 123-45-67</li>
+                        <li class="transition-all duration-300 hover:text-white hover:pl-1">Адрес: Москва, ул. Лесная, д. 1</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 transition-all duration-300 hover:scale-105">Соцсети</h4>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 transition-all duration-300 hover:scale-105">Документы</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li><a href="#" class="hover:text-white transition-all duration-300 hover:pl-1">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="hover:text-white transition-all duration-300 hover:pl-1">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="hover:text-white transition-all duration-300 hover:pl-1">Оферта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p class="transition-all duration-300 hover:text-gray-300">© 2023 ДеревьЯ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

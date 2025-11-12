@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Истории - ДеревьЯ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Навигация -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-gray-700 rounded-lg mr-3"></div>
+                <h1 class="text-2xl font-bold text-gray-800">ДеревьЯ</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="./main.html" class="text-gray-800 font-medium">Главная</a>
+                <a href="./__calc-tree.html" class="text-gray-800 font-medium">Участвовать</a>
+                <a href="./__history-tree.html" class="text-gray-800 font-medium underline">Истории</a>
+                <a href="./__company.html" class="text-gray-800 font-medium">Для компаний</a>
+                <a href="./__alley-brave.html" class="text-gray-800 font-medium">Роща славы</a>
+            </nav>
+            <button class="md:hidden text-gray-800 transition-transform duration-200 hover:scale-110 active:scale-95">
+                <div class="w-6 h-6 flex flex-col justify-between">
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Заголовок страницы -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4 text-gray-800">Истории посадок</h1>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">Реальные истории людей и компаний, которые уже посадили свой лес</p>
+        </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="px-4 py-2 bg-gray-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Все истории</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-gray-200">Частные лица</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-gray-200">Компании</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-gray-200">Свадебные деревья</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-gray-200">Роща славы</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Истории -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- История 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-gray-300 relative">
+                        <div class="absolute top-4 left-4 bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Частное лицо</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Семья Ивановых: наша первая посадка</h3>
+                        <p class="text-gray-600 mb-4">Весной 2023 года мы всей семьей поехали сажать лес в Подмосковье. Это был незабываемый опыт для детей...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">15 саженцев</span>
+                            <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать полностью →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- История 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-amber-300 relative">
+                        <div class="absolute top-4 left-4 bg-amber-700 text-white px-3 py-1 rounded-full text-sm">Компания</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Газпромбанк: корпоративная посадка</h3>
+                        <p class="text-gray-600 mb-4">Сотрудники банка высадили 2 гектара леса в Ленинградской области в рамках программы корпоративной ответственности...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">2000 саженцев</span>
+                            <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать полностью →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- История 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-pink-300 relative">
+                        <div class="absolute top-4 left-4 bg-pink-700 text-white px-3 py-1 rounded-full text-sm">Свадебное дерево</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Анна и Михаил: начало семейной традиции</h3>
+                        <p class="text-gray-600 mb-4">В день свадьбы вместо традиционного букета мы посадили дуб. Теперь каждую годовщину приезжаем к нему...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">1 особое дерево</span>
+                            <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать полностью →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- История 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-blue-300 relative">
+                        <div class="absolute top-4 left-4 bg-blue-700 text-white px-3 py-1 rounded-full text-sm">Роща славы</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Памяти защитника Отечества</h3>
+                        <p class="text-gray-600 mb-4">Семья Сергея посадила дерево в честь отца, погибшего при исполнении военного долга. Теперь у них есть место памяти...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">1 дерево памяти</span>
+                            <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать полностью →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- История 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-gray-300 relative">
+                        <div class="absolute top-4 left-4 bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Посвящение в мужчины</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Илья: мой первый ответственный поступок</h3>
+                        <p class="text-gray-600 mb-4">В 12 лет я вместе с отцом посадил свое первое дерево. Теперь я понимаю, что значит нести ответственность...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">1 дерево</span>
+                            <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать полностью →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- История 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-48 bg-amber-300 relative">
+                        <div class="absolute top-4 left-4 bg-amber-700 text-white px-3 py-1 rounded-full text-sm">Компания</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Яндекс: шефство над гектаром леса</h3>
+                        <p class="text-gray-600 mb-4">Компания взяла под опеку 10 гектаров леса в Карелии. Ежегодно сотрудники приезжают ухаживать за посадками...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">10 гектаров</span>
+                            <a href="#" class="text-gray-700 font-medium transition-all duration-300 hover:pl-2">Читать полностью →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Показать больше историй</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Видео-блок -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Видео с посадок</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-64 bg-gray-300 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-gray-500 rounded-full transition-transform duration-300 hover:scale-110"></div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="font-medium">Весенняя посадка 2023 - обзор с квадрокоптера</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
+                    <div class="w-full h-64 bg-gray-300 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-gray-500 rounded-full transition-transform duration-300 hover:scale-110"></div>
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="font-medium">Интервью с участниками осенней посадки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="py-16 bg-gray-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Присоединяйтесь к нашим историям</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Станьте частью сообщества людей, которые меняют экологию России к лучшему</p>
+            <button class="bg-white text-gray-700 px-8 py-3 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Участвовать в посадке</button>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ДеревьЯ</h3>
+                    <p class="text-gray-200">Посади лес, в который можно вернуться</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li>Email: info@derevya.ru</li>
+                        <li>Телефон: +7 (495) 123-45-67</li>
+                        <li>Адрес: Москва, ул. Лесная, д. 1</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Соцсети</h4>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Документы</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Оферта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 ДеревьЯ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

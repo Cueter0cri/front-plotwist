@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для компаний - ДеревьЯ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Навигация -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-gray-700 rounded-lg mr-3"></div>
+                <h1 class="text-2xl font-bold text-gray-800">ДеревьЯ</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="./main.html" class="text-gray-800 font-medium">Главная</a>
+                <a href="./__calc-tree.html" class="text-gray-800 font-medium">Участвовать</a>
+                <a href="./__history-tree.html" class="text-gray-800 font-medium ">Истории</a>
+                <a href="./__company.html" class="text-gray-800 font-medium underline">Для компаний</a>
+                <a href="./__alley-brave.html" class="text-gray-800 font-medium">Роща славы</a>
+            </nav>
+            <button class="md:hidden text-gray-800 transition-transform duration-200 hover:scale-110 active:scale-95">
+                <div class="w-6 h-6 flex flex-col justify-between">
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                    <div class="w-full h-0.5 bg-gray-800"></div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Заголовок страницы -->
+    <section class="py-12 bg-amber-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4 text-amber-800">Корпоративное участие</h1>
+            <p class="text-xl text-amber-700 max-w-2xl mx-auto">Экологическая ответственность как часть корпоративной культуры</p>
+        </div>
+    </section>
+
+    <!-- Преимущества для компаний -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-800">Почему компаниям важно участвовать</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center border border-amber-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                        <div class="w-8 h-8 bg-amber-700 rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-amber-800">Имидж и репутация</h3>
+                    <p class="text-gray-600">Укрепление бренда как социально ответственной компании, заботящейся об экологии</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 text-center border border-amber-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                        <div class="w-8 h-8 bg-amber-700 rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-amber-800">Командообразование</h3>
+                    <p class="text-gray-600">Совместная посадка леса - уникальный тимбилдинг на свежем воздухе</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 text-center border border-amber-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                        <div class="w-8 h-8 bg-amber-700 rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-amber-800">Экологический вклад</h3>
+                    <p class="text-gray-600">Реальный вклад в восстановление лесов России и борьбу с изменением климата</p>
+                </div>
+            </div>
+            
+            <div class="bg-amber-50 rounded-xl p-8 transition-all duration-300 hover:shadow-md">
+                <h3 class="text-2xl font-bold mb-6 text-amber-800 text-center">Форматы корпоративного участия</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Тариф 1 гектар -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center border-2 border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <h3 class="text-2xl font-bold mb-4 text-amber-700">1 гектар</h3>
+                        <p class="text-4xl font-bold mb-6 text-amber-700">100 000 ₽</p>
+                        <ul class="text-left mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Сертификат шефа гектара
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Отличительный знак в офисе
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Ежеквартальные отчёты
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Оставить заявку</button>
+                    </div>
+                    
+                    <!-- Тариф 10 гектаров -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center border-2 border-amber-400 transform scale-105 relative transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-110">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-medium">Популярный</div>
+                        <h3 class="text-2xl font-bold mb-4 text-amber-700">10 гектаров</h3>
+                        <p class="text-4xl font-bold mb-6 text-amber-700">900 000 ₽</p>
+                        <ul class="text-left mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Все преимущества 1 гектара
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Упоминание на сайте и в соцсетях
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Возможность расширять площадь
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Корпоративная посадка для сотрудников
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Оставить заявку</button>
+                    </div>
+                    
+                    <!-- Тариф 100 гектаров -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center border-2 border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <h3 class="text-2xl font-bold mb-4 text-amber-700">100 гектаров</h3>
+                        <p class="text-4xl font-bold mb-6 text-amber-700">8 000 000 ₽</p>
+                        <ul class="text-left mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Все преимущества 10 гектаров
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Именной знак на территории
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                PR-кампания в СМИ
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 bg-amber-600 rounded-full mr-2 mt-1"></div>
+                                Ежегодная возможность "удваивать гектар"
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кейсы компаний -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-800">Наши корпоративные партнёры</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="bg-white h-24 rounded-lg shadow-sm flex items-center justify-center transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                    <span class="text-gray-500 font-medium">Логотип компании</span>
+                </div>
+                <div class="bg-white h-24 rounded-lg shadow-sm flex items-center justify-center transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                    <span class="text-gray-500 font-medium">Логотип компании</span>
+                </div>
+                <div class="bg-white h-24 rounded-lg shadow-sm flex items-center justify-center transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                    <span class="text-gray-500 font-medium">Логотип компании</span>
+                </div>
+                <div class="bg-white h-24 rounded-lg shadow-sm flex items-center justify-center transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer">
+                    <span class="text-gray-500 font-medium">Логотип компании</span>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-md max-w-4xl mx-auto transition-all duration-300 hover:shadow-lg">
+                <h3 class="text-2xl font-bold mb-6 text-amber-800 text-center">Отзыв нашего партнёра</h3>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                        <div class="w-32 h-32 bg-amber-200 rounded-full transition-transform duration-300 hover:scale-110"></div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <blockquote class="text-lg italic text-gray-700 mb-4">
+                            "Участие в программе шефства над лесом стало важной частью нашей корпоративной социальной ответственности. Сотрудники с большим энтузиазмом участвуют в посадках, а наши клиенты ценят нашу экологическую позицию."
+                        </blockquote>
+                        <div>
+                            <p class="font-semibold text-amber-800">Иван Петров</p>
+                            <p class="text-gray-600">Директор по развитию, Газпромбанк</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма для компаний -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-amber-800 text-center">Оставить заявку для компании</h2>
+                
+                <form class="bg-white rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Название компании</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-amber-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">ИНН</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-amber-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Контактное лицо</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-amber-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Должность</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-amber-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Телефон</label>
+                            <input type="tel" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-amber-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-amber-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Интересующий формат участия</label>
+                        <div class="w-full p-3 border border-gray-300 rounded-lg bg-white transition-all duration-200 hover:border-amber-500 focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-200">Выберите вариант</div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Комментарий</label>
+                        <textarea rows="4" class="w-full p-3 border border-gray-300 rounded-lg transition-all duration-200 hover:border-amber-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-200"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ДеревьЯ</h3>
+                    <p class="text-gray-200">Посади лес, в который можно вернуться</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li>Email: info@derevya.ru</li>
+                        <li>Телефон: +7 (495) 123-45-67</li>
+                        <li>Адрес: Москва, ул. Лесная, д. 1</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Соцсети</h4>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                        <div class="w-8 h-8 bg-gray-700 rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Документы</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Оферта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 ДеревьЯ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
